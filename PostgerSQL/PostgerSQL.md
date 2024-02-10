@@ -51,6 +51,7 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 
 * *to provide a graphical administration tool to make it easier to manipulate schema and data in PostgreSQL*
 
+---
 # IEEE Back-End Task-2
 
 **Constrains in PostgerSQL :**
