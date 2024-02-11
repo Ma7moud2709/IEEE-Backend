@@ -51,8 +51,9 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 
 * *to provide a graphical administration tool to make it easier to manipulate schema and data in PostgreSQL*
 
----
-# IEEE Back-End Task-2
+<br>
+
+#  IEEE Back-End Task-2
 
 **Constrains in PostgerSQL :**
 
@@ -85,3 +86,20 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 - **_Functional Indexes:_**
 
   - PostgreSQL supports functional indexes allowing indexing on expressions or functions of column values, a feature not directly available in MySQL.
+
+<br>
+
+#  IEEE Back-End Task-3
+
+## primary keys vs unique keysey 
+
+* Primary Key: 
+    * ***Unique column per table.***
+    * No dublicated values.
+    * No Null Values.
+    * It identifies specific records in the table.
+---
+* Unique Key:
+    * ***Unique Value per Column***
+    * No dublicated values.
+    * It prevents duplicate entries in a column, except for a NULL value.
