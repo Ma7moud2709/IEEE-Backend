@@ -15,11 +15,11 @@
 _An RDBMS is a type of database management system (DBMS) that stores data in a row-based table structure which connects related data elements._
 
 - **Number of allowed users:** <br>
-  *While a DBMS can only accept one user at a time, an RDBMS can operate with multiple users.*
+  _While a DBMS can only accept one user at a time, an RDBMS can operate with multiple users._
 
-- **Amount of data:** <br> *RDBMSes can handle any amount of data, from small to large, while a DBMS can only manage small amounts.*
+- **Amount of data:** <br> _RDBMSes can handle any amount of data, from small to large, while a DBMS can only manage small amounts._
 
-- **Database structure:** <br> *In a DBMS, data is kept in a hierarchical form, whereas an RDBMS utilizes a table where the headers are used as column names and the rows contain the corresponding values.*
+- **Database structure:** <br> _In a DBMS, data is kept in a hierarchical form, whereas an RDBMS utilizes a table where the headers are used as column names and the rows contain the corresponding values._
 
 ---
 
@@ -28,32 +28,34 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 **What is PostgerSQL:**
 <br>
 
-* *PostgreSQL is an object-relational database management system (ORDBMS) based on POSTGRES, Version 4.2* 
-* *PostgreSQL is an open-source descendant of this original Berkeley code. It supports a large part of the SQL standard and **offers many modern features:***
+- _PostgreSQL is an object-relational database management system (ORDBMS) based on POSTGRES, Version 4.2_
+- \*PostgreSQL is an open-source descendant of this original Berkeley code. It supports a large part of the SQL standard and **offers many modern features:\***
 
-    * Complex queries
-    * Foreign keys 
-    * Triggers
-    * Updatable views
+  - Complex queries
+  - Foreign keys
+  - Triggers
+  - Updatable views
 
 ---
+
 <br>
 
 **PostgerSQl Clients:**
 <br>
 
-* *the clients are just wrappers over SQL commands that get executed on the server and return a response using client server*
+- _the clients are just wrappers over SQL commands that get executed on the server and return a response using client server_
 
 ---
+
 <br>
 
 **What purpose does pgAdmin serve in PostgreSQL?**
 
-* *to provide a graphical administration tool to make it easier to manipulate schema and data in PostgreSQL*
+- _to provide a graphical administration tool to make it easier to manipulate schema and data in PostgreSQL_
 
 <br>
 
-#  IEEE Back-End Task-2
+# IEEE Back-End Task-2
 
 **Constrains in PostgerSQL :**
 
@@ -89,17 +91,56 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 
 <br>
 
-#  IEEE Back-End Task-3
+# IEEE Back-End Task-3
 
-## primary keys vs unique keysey 
+## primary keys vs unique keysey
 
-* Primary Key: 
-    * ***Unique column per table.***
-    * No dublicated values.
-    * No Null Values.
-    * It identifies specific records in the table.
+- **Primary Key:**
+  - **_Unique column per table._**
+  - No dublicated values.
+  - No Null Values.
+  - It identifies specific records in the table.
+
 ---
-* Unique Key:
-    * ***Unique Value per Column***
-    * No dublicated values.
-    * It prevents duplicate entries in a column, except for a NULL value.
+
+- **Unique Key:**
+  - **_Unique Value per Column_**
+  - No dublicated values.
+  - It prevents duplicate entries in a column, except for a NULL value.
+
+<br>
+
+# IEEE Back-End Task-4
+
+## Relations (one to one & one to many)
+
+- **One-to-One (1:1) Relationship:**
+
+  - In a one-to-one relationship, one record in a table is associated with exactly one record in another table, and vice versa.
+
+  - In terms of database tables, you might have a "Person" table and a "Passport" table, where the primary key of the "Person" table (e.g., person_id) is linked as a foreign key in the "Passport" table.
+
+- **One-to-Many (1:N) Relationship:**
+
+  - In a one-to-many relationship, one record in a table can be associated with one or more records in another table, but each record in the related table is associated with only one record in the primary table.
+  - This is typically implemented by adding a foreign key column in the "many" side (e.g., the "Employee" table) that references the primary key of the "one" side (e.g., the "Department" table).
+
+- ## **Bonus(\***write-ahead logging()**\*)**
+
+  - Write-ahead logging (**_WAL_**) is a technique used in databases and file systems to ensure data integrity and recoverability in the event of system failures.
+
+  - It is a protocol where modifications to a database or file system are first recorded in a log before they are applied to the actual data structures.
+
+  ## **EX:**
+  - ### **Logging Changes:**
+
+    - When a transaction or operation modifies data in the database or file system, instead of directly updating the data structures, the changes are first recorded in a sequential log file called the "write-ahead log" or "redo log".
+
+  - ### **Sequential Writes:**
+    - The write-ahead log is typically stored on disk, and writes to the log are performed sequentially to optimize performance.
+
+
+  - ### **Data Modifications:**
+    - After the changes are logged, they are applied to the actual data structures in memory or on disk.
+
+  - ## [ More Knowledge About ***(WAL)***](https://www.sqlite.org/wal.html)
