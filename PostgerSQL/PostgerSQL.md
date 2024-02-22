@@ -144,3 +144,23 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
     - After the changes are logged, they are applied to the actual data structures in memory or on disk.
 
   - ## [ More Knowledge About ***(WAL)***](https://www.sqlite.org/wal.html)
+
+
+# IEEE Back-End Task-5
+
+ 1. **Multi-version Concurrency Control (MVCC)**:
+   - MVCC is a method used by databases to allow multiple transactions to access data concurrently while maintaining consistency.
+   - It uses snapshots of the database at different points in time to ensure transactions don't interfere with each other.
+
+2. **Triggers**:
+   - Triggers are database objects that automatically execute in response to specific events or actions on the database, such as INSERT, UPDATE, or DELETE operations.
+   - They are used for enforcing data integrity constraints, auditing changes, and automating database operations.
+
+3. **Database Backup**:
+   - Database backup is crucial for data protection and disaster recovery.
+   - Methods for taking backups vary depending on the database management system (DBMS) being used.
+   - Common backup methods include logical backups (e.g., using utilities like `mysqldump` or `pg_dump`) and physical backups (e.g., using tools like `pg_basebackup`).
+   - Cloud-based database services often offer built-in backup features for automated and managed backups.
+
+Each of these topics plays a vital role in database management and maintenance, ensuring data integrity, security, and availability.
+
