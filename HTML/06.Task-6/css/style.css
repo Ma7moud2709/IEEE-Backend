@@ -34,7 +34,8 @@ input {
 }
 
 input:focus {
-    background-color: #7c73c1;
+        background-color: #78758f96;
+        border: 1px solid black !important;
 }
 
 input[type='text'],
