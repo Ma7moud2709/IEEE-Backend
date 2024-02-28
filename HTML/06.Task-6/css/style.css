@@ -1,0 +1,122 @@
+body {
+    background: #353b48;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+h1{
+    color: white;
+    border-bottom: 5px solid #e84118;
+    font-weight: bold;
+}
+
+
+form {
+    padding-top: 4rem;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #079992;
+    box-shadow: 0px 0px 5px 1px #000000;
+}
+
+input {
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+input:focus {
+    background-color: #7c73c1;
+}
+
+input[type='text'],
+input[type='date'] {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+input[type="file"] {
+    width: 100px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    height: 18px;
+    width: 18px;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+}
+
+.gender,
+.hoobies {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    box-shadow: 0px 0px 5px 1px #0cc35b;
+
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.image input {
+    background-image: url(../img/Mahmoud.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.image input::file-selector-button {
+    visibility: hidden;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 3px 2px #353b48;
+}
+
+.image .icon {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.image:hover {
+    .icon {
+        visibility: visible;
+    }
+}
