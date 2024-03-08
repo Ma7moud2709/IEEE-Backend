@@ -93,7 +93,7 @@ _An RDBMS is a type of database management system (DBMS) that stores data in a r
 
 # IEEE Back-End Task-3
 
-## primary keys vs unique keysey
+## primary keys vs unique keys
 
 - **Primary Key:**
   - **_Unique column per table._**
