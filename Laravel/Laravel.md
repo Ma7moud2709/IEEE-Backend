@@ -26,15 +26,17 @@ $value = Cache::get('key');
 ```
 
 Common Facades
-* Cache: Interface to caching system.
-* Config: Access configuration values.
-* DB: Run database queries.
-* Log: Log messages.
-* Queue: Interact with queue system.
-* Route: Register routes.
-* URL: Generate URLs.
+
+- Cache: Interface to caching system.
+- Config: Access configuration values.
+- DB: Run database queries.
+- Log: Log messages.
+- Queue: Interact with queue system.
+- Route: Register routes.
+- URL: Generate URLs.
+
 3. Laravel Routing
-Routing defines routes associated with controller actions or closures.
+   Routing defines routes associated with controller actions or closures.
 
 ```php
 Basic Routing
@@ -75,3 +77,67 @@ Middleware
 Route::get('admin/profile', function () {
     // Uses Admin Middleware
 })->middleware('admin');
+```
+
+## IEEE Task 22
+
+# Blade Templates in Laravel
+
+Blade is Laravel's powerful and lightweight templating engine. It allows for the use of plain PHP code in views and provides a variety of convenient directives for common tasks.
+
+## Basic Usage
+
+Blade templates use the `.blade.php` file extension and are stored in the `resources/views` directory.
+
+# Blade Directives
+
+Blade offers several directives to simplify template development:
+
+- **Conditional Statements**:
+  ```blade
+    @if ($user->isAdmin())
+      <p>Welcome, admin!</p>
+    @elseif ($user->isModerator())
+      <p>Welcome, moderator!</p>
+    @else
+      <p>Welcome, user!</p>
+    @endif
+  ```
+- **Loops**
+
+  ```blade
+  @foreach ($users as $user)
+  <p>{{ $user->name }}</p>
+  @endforeach
+
+  @for ($i = 0; $i < 10; $i++)
+
+  <p>The current value is {{ $i }}</p>
+  @endfor
+
+  @while (true)
+
+  <p>I'm looping forever.</p>
+  @endwhile
+  ```
+
+# Components and Slots
+
+Blade components allow for reusable pieces of UI, while slots enable passing content to components.
+
+- Defining a Component:
+  ```blade
+      <!-- resources/views/components/alert.blade.php -->
+      <div class="alert alert-{{ $type }}">
+      {{ $slot }}
+      </div>
+  ```
+- Using a Component:
+
+  ```blade
+      <!-- Usage of the component -->
+      <x-alert type="error">
+          An error has occurred.
+      </x-alert>
+
+  ```
